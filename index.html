@@ -7,11 +7,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Shopping App</h1>
-
-  <div id="cart">
-    🛒 Cart: <span id="cart-count">0</span> items | Total: $<span id="cart-total">0.00</span>
-    <button id="checkout-btn">Checkout</button>
+  <div class="header">
+    <h1>🛍️ Shopping App</h1>
+    <div class="controls">
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider round"></span>
+      </label>
+      <div id="cart">
+        🛒 <span id="cart-count">0</span>
+        <button id="checkout-btn">Checkout</button>
+      </div>
+    </div>
   </div>
 
   <div class="products">
@@ -19,6 +26,9 @@
       <img src="https://via.placeholder.com/150" alt="Product 1">
       <h2>Product 1</h2>
       <p>$10.00</p>
+      <div class="stars">★★★★☆</div>
+      <p class="desc">A lightweight, comfy daily essential.</p>
+      <input type="number" min="1" value="1" class="quantity">
       <button class="add-to-cart">Add to Cart</button>
     </div>
 
@@ -26,6 +36,9 @@
       <img src="https://via.placeholder.com/150" alt="Product 2">
       <h2>Product 2</h2>
       <p>$15.00</p>
+      <div class="stars">★★★☆☆</div>
+      <p class="desc">Versatile, reliable and stylish choice.</p>
+      <input type="number" min="1" value="1" class="quantity">
       <button class="add-to-cart">Add to Cart</button>
     </div>
 
@@ -33,13 +46,16 @@
       <img src="https://via.placeholder.com/150" alt="Product 3">
       <h2>Product 3</h2>
       <p>$20.00</p>
+      <div class="stars">★★★★★</div>
+      <p class="desc">Top-rated premium quality product.</p>
+      <input type="number" min="1" value="1" class="quantity">
       <button class="add-to-cart">Add to Cart</button>
     </div>
   </div>
 
-  <div id="cart-items">
-    <!-- Dynamically added cart items will appear here -->
-  </div>
+  <div id="cart-items"></div>
+
+  <div id="toast"></div>
 
   <script src="script.js"></script>
 </body>
